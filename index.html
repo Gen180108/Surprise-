@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ayah & Mamah | Cinta Terbaikku</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <audio id="backgroundMusic" autoplay loop hidden>
+        <source src="lagu.mp3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="musicIcon" class="fixed bottom-8 right-8 text-4xl animate-bounce text-rose-300 z-50">
+        ▶️
+    </div>
+    
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #d6336c;
+            --secondary: #c2255c;
+            --accent: #ff758f;
+            --dark: #2a0a0a;
+            --light: #fff9f9;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .card {
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            transition: all 0.3s ease;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        
+        .heart-beat {
+            animation: heartBeat 1.2s infinite;
+        }
+        
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            15% { transform: scale(1.3); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.15); }
+            60% { transform: scale(1); }
+        }
+        
+        .memory-card {
+            transition: all 0.3s ease;
+        }
+        
+        .memory-card:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+        
+        .love-animation {
+            position: fixed;
+            pointer-events: none;
+            animation: loveFloat 3s ease-out forwards;
+        }
+        
+        @keyframes loveFloat {
+            0% { opacity: 1; transform: translateY(0) rotate(0deg); }
+            100% { opacity: 0; transform: translateY(-100px) rotate(360deg); }
+        }
+        
+        .heart-pulse {
+            animation: heartPulse 0.8s ease-out;
+        }
+        
+        @keyframes heartPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+        
+        .love-fountain {
+            position: fixed;
+            pointer-events: none;
+            animation: fountain 1.5s ease-out forwards;
+        }
+        
+        @keyframes fountain {
+            0% { opacity: 1; transform: translateY(0) translateX(0); }
+            100% { opacity: 0; transform: translateY(-100vh) translateX(calc((var(--random-x) - 0.5) * 100vw)); }
+        }
+        
+        .birthday-cake {
+            position: fixed;
+            bottom: -300px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 1s ease-out;
+            z-index: 1001;
+        }
+        
+        .cake-visible {
+            bottom: 20px;
+        }
+        
+        .candle {
+            position: absolute;
+            animation: flame 0.8s infinite alternate;
+        }
+        
+        @keyframes flame {
+            0% { transform: scale(1) rotate(-2deg); }
+            100% { transform: scale(1.1) rotate(2deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-rose-900/80 backdrop-blur-md z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl font-bold gradient-text bg-gradient-to-r from-rose-200 to-rose-400 bg-clip-text text-transparent">
+                            Happy Birthday
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-24 pb-32 gradient-bg">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30"></div>
+            <div class="absolute top-0 left-0 w-full h-full opacity-20">
+                <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-rose-500 mix-blend-overlay filter blur-3xl opacity-70 animate-blob"></div>
+                <div class="absolute top-1/3 right-1/4 w-64 h-64 rounded-full bg-pink-500 mix-blend-overlay filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <div class="heart-beat text-6xl mb-8">🎉🎂</div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
+                    <span class="typewriter">Happy Birthday<br>Ayah 44 & Mamah 39</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-10">
+                    Terima kasih untuk semua cinta dan pengorbanan yang tak pernah berhenti mengalir
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button id="surpriseBtn" class="px-8 py-3 bg-transparent border-2 border-white text-white rounded-full font-bold hover:bg-white/10 transition-all duration-300 transform hover:scale-105 flex items-center">
+                        <i class="fas fa-heart mr-2"></i> Surprise !!!!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Birthday Cake -->
+    <div id="birthdayCake" class="birthday-cake">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" 
+             alt="Birthday Cake" 
+             class="w-48 h-48"
+             style="filter: drop-shadow(0 0 20px rgba(255, 223, 0, 0.5))">
+        <div class="candle" style="left: 30%; top: -20px;">🕯️</div>
+        <div class="candle" style="left: 50%; top: -25px;">🕯️</div>
+        <div class="candle" style="left: 70%; top: -20px;">🕯️</div>
+    </div>
+
+    <!-- Love Letter Section -->
+    <section class="py-20 bg-rose-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="card p-8">
+                <h2 class="text-3xl font-bold mb-6 text-center text-white">
+                    <i class="fas fa-quote-left mr-2 text-rose-200"></i>
+                    Untuk Orang Tua Tercinta
+                    <i class="fas fa-quote-right ml-2 text-rose-200"></i>
+                </h2>
+                
+                <div class="space-y-6 text-white/90 text-lg leading-relaxed">
+                    <p>💖 Ayah, Mamah...</p>
+                    
+                    <p>Di hari spesial kalian ini, ingin kuucapkan terima kasih yang tak terhingga. 
+                        Usia mungkin bertambah, tapi cinta kalian tetap muda dan mengalir selalu.</p>
+                    
+                    <p class="text-center text-xl font-semibold text-rose-200">
+                        " Orang tua adalah rumah pertama bagi seorang anak untuk bersandar "
+                    </p>
+                    
+                    <p>44 tahun kebijaksanaan Ayah, 39 tahun kelembutan Mamah, telah menjadi pondasi kokoh keluarga. 
+                        Setiap kerut wajah adalah cerita, setiap uban adalah mahkota pengorbanan.</p>
+                    
+                    <div class="text-center my-8">
+                        <div class="inline-block p-4 border-2 border-rose-300 rounded-lg">
+                            <p class="text-2xl font-bold text-rose-200">Semoga :</p>
+                            <ul class="list-disc list-inside text-left mt-2">
+                                <li>Dikuatkan Rezekinya</li>
+                                <li>Sehat jasmani dan rohani</li>
+                                <li>Menjadi yang pertama melihat anaknya sukses</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p class="text-center text-3xl mt-8">❤️ Aaamiiinn ❤️</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Memories -->
+    <section class="py-20 bg-rose-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-12 text-center text-white">
+                Our Memories
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="memory-card">
+                    <div class="w-full h-64 rounded-2xl overflow-hidden border-4 border-white/20">
+                        <img src="WhatsApp Image 2025-04-29 at 09.31.01.jpeg" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-center mt-4 text-rose-100">22 January 2022</p>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="w-full h-64 rounded-2xl overflow-hidden border-4 border-white/20">
+                        <img src="t.jpeg" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-center mt-4 text-rose-100">Ayah pas bujang </p>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="w-full h-64 rounded-2xl overflow-hidden border-4 border-white/20">
+                        <img src="WhatsApp Image 2025-04-29 at 09.30.58.jpeg" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-center mt-4 text-rose-100">Setiap momen adalah kenangan </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-20 bg-rose-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-12 text-center text-white">
+                Story of life 
+            </h2>
+            
+            <div class="space-y-8">
+                <div class="card p-6">
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 bg-rose-500 rounded-full flex items-center justify-center text-2xl mr-4">👨👩</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">2000 - 2005 Pertemuan Pertama</h3>
+                            <p class="text-rose-100">Pertemuan ayah dan mamah (kayaknya)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card p-6">
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 bg-rose-500 rounded-full flex items-center justify-center text-2xl mr-4">💍</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">20-11-2005 - Ikrar Suci</h3>
+                            <p class="text-rose-100">Mengikat janji dalam bahtera rumah tangga</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card p-6">
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 bg-rose-500 rounded-full flex items-center justify-center text-2xl mr-4">👶</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">18-01-2008  - Kelahiran Anak Pertama</h3>
+                            <p class="text-rose-100">Kebahagiaan bertambah dengan sosok kehadiran</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rose-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="text-4xl mb-8">🎂</div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+                "Orang tua yang bahagia adalah warisan terbaik untuk anak-anaknya"
+            </h3>
+            <p class="text-rose-200">Teruslah bersinar seperti matahari yang selalu menghangatkan kami</p>
+            <p class="text-rose-300 mt-8">&copy; 2025 - Genuyus islami tade </p>
+        </div>
+    </footer>
+
+    <script>
+        const surpriseBtn = document.getElementById('surpriseBtn');
+        const memoryPhotos = [
+            'WhatsApp Image 2025-04-29 at 09.31.01.jpeg',
+            't.jpeg',
+            'WhatsApp Image 2025-04-29 at 09.30.58.jpeg'
+        ]; // foto kenangan
+    
+        surpriseBtn.addEventListener('click', () => {
+            for (let i = 0; i < 20; i++) { // membuat 20 bubble
+                createLoveOrPhoto();
+            }
+        });
+    
+        function createLoveOrPhoto() {
+            const element = document.createElement('div');
+            element.classList.add('love-animation');
+    
+            const size = Math.random() * 30 + 30;
+            const left = Math.random() * window.innerWidth;
+            const duration = Math.random() * 2 + 3;
+    
+            element.style.cssText = `
+                position: absolute;
+                top: ${window.innerHeight}px;
+                left: ${left}px;
+                font-size: ${size}px;
+                animation: loveFloat ${duration}s ease-out forwards;
+                z-index: 1000;
+            `;
+    
+            if (Math.random() < 0.7) {
+                // 70% chance buat ❤️
+                element.innerHTML = '❤️';
+                element.style.color = '#ff758f';
+            } else {
+                // 30% chance buat foto kenangan
+                const img = document.createElement('img');
+                img.src = memoryPhotos[Math.floor(Math.random() * memoryPhotos.length)];
+                img.style.width = `${size}px`;
+                img.style.height = `${size}px`;
+                img.style.objectFit = 'cover';
+                img.style.borderRadius = '50%';
+                img.style.boxShadow = '0 0 10px rgba(255,255,255,0.5)';
+                element.appendChild(img);
+            }
+    
+            document.body.appendChild(element);
+    
+            setTimeout(() => {
+                element.remove();
+            }, duration * 1000);
+        }
+        const music = document.getElementById('backgroundMusic');
+    const icon = document.getElementById('musicIcon');
+
+    icon.addEventListener('click', () => {
+        if (music.paused) {
+            music.play();
+            icon.textContent = '🎵'; // Play icon
+        } else {
+            music.pause();
+            icon.textContent = '🔇'; // Mute icon
+        }
+    });
+    </script>    
+       
